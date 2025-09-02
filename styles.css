@@ -297,3 +297,8 @@ body {
 source {
   border-radius: 10px;
 }
+
+.video-actual {
+  height: 20vh;
+  width: 32vh;
+}

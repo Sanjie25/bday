@@ -29,6 +29,7 @@
         <div class="decor"><img src="./birb.png"></div>
           <div class="contents">
         <h2>for probably the content</h2>
+        <div id="giftContent"></div>
           </div>
       </div>
     </div>
@@ -41,7 +42,6 @@
         <h2>Enjoy this while I'll learn to step up next year</h2>
         </div>
           <button class="gift-btn" id="gift-btn"> Surprizze </button>
-        <div id="giftContent"></div>
       </div>
     </div>
 
@@ -69,7 +69,6 @@
 
 
           function showGiftCard() {
-              const giftContent = document.getElementById("giftContent");
               giftPage.style.display = 'flex';
             setTimeout(() => {
               giftPage.classList.add('show');
@@ -77,7 +76,13 @@
             }, 6);
           }
           function showMessageCard() {
-              console.log("done")
+              const giftContent = document.getElementById("giftContent");
+              giftContent.innerHTML = `
+              <div class="video-player">
+                  <iframe class="video-actual" src="https://drive.google.com/file/d/10o4TZArCxQsZFGmLyi99-RI4jkccAQ9z/preview" width="640" height="480" allow="autoplay"></iframe>
+                </video> 
+              </div>
+              `;
               messagePage.style.display = 'flex';
               setTimeout(() => {
               messagePage.classList.add('show');

@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+:root {
+  /* Catppuccin Mocha Colors */
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
+    .crt::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+      z-index: 9;
+      background-size: 100% 2px, 3px 100%;
+      pointer-events: none;
+    }
+body {
+  font-family: "MS Gothic";
+  background-image: url("https://vulpecula.neocities.org/images/greenstars.jpg");
+  background-repeat: repeat;
+  /* background: linear-gradient(135deg, var(--base) 0%, var(--mantle) 100%); */
+  color: #3d2b1f;
+  min-height: 100vh;
+  /* overflow-x: hidden; */
+}
+
+/* Open Page */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.decor {
+  max-width: 1vh;
+  max-height: 2vh;
+  height: auto;
+  width: auto;
+  resize: both;
+  position: relative;
+  z-index: 0;
+  top: -10rem;
+  left: -10rem;
+  transform: scale(0.6);
+}
+
+.message-content > .decor {
+  left:-5rem;
+  top: -14rem;
+}
+
+@keyframes float {
+   0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Moves up by 15px */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.landing-card {
+  /* background: var(--surface0); */
+  background-image: url("https://vulpecula.neocities.org/images/paper2.jpg");
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  height: 70%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--surface1);
+  transform: translateY(20px) scale(1) rotate(0turn);
+  opacity: 0;
+  transition: all 0.7s ease;
+  animation: zoomInUp 1s ease-in forwards;
+}
+
+.landing-card:hover {
+  transform: scale(1.2) rotate(0.01turn);
+}
+
+@keyframes zoomInUp {
+  to {
+    transform: translateY(10);
+    opacity: 1;
+  }
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo h1 {
+  color: var(--rosewater);
+  filter: drop-shadow(0px 1px #454d32 ) drop-shadow(0 -1px #454d32 ) drop-shadow(1px 0 #454d32 ) drop-shadow(-1px 0 #454d32 );
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.logo p {
+  /* color: var(--peach); */
+  color: #8a9a5b;
+  text-align: left;
+  padding-top: 9px;
+  padding-left: 30px;
+  font-family: "MS Gothic";
+  font-size: 0.8rem;
+  background: #fdf5e6;
+  opacity: 0.8;
+  border: 1px solid #555;
+  padding: 0.5em;
+  border-radius: 3px;
+  color: #3d2b1f;
+}
+
+.open-btn {
+  width: 100%;
+  background: #3d2b1f;
+  opacity: 0.8;
+  border: 1px solid #555;
+  padding: 0.5em;
+  border-radius: 3px;
+  color: #fb7f26;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform: scale(1) rotate(0turn);
+}
+
+.left-arr, .right-arr {
+  filter: invert(1);
+}
+
+.contents {
+  color: #8a9a5b;
+  text-align: left;
+  padding-top: 9px;
+  padding-left: 30px;
+  font-family: "MS Gothic";
+  font-size: 0.8rem;
+  background: #fdf5e6;
+  opacity: 0.8;
+  border: 1px solid #555;
+  padding: 0.5em;
+  border-radius: 3px;
+  color: #3d2b1f;
+}
+
+.open-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 20px rgba(61, 43, 31, 0.3);
+}
+
+.open-btn:active {
+  transform: scale(1);
+}
+
+.message{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(17, 17, 27, 0.8); */
+  backdrop-filter: blur(2px);
+  z-index: 2000;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-content {
+  background-image: url("https://vulpecula.neocities.org/images/paper2.jpg");
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 500px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #3d2b1f;
+  width: 90%;
+  text-align: center;
+  opacity: 1;
+  transform: scale(0.3) rotate(0turn);
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+
+.message.show .message-content {
+  transform: scale(1) rotate(0.02turn);
+  opacity: 1;
+}
+
+.gift {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(17, 17, 27, 0.8); */
+  backdrop-filter: blur(2px);
+  z-index: 2000;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-content {
+  background-image: url("https://vulpecula.neocities.org/images/paper2.jpg");
+  padding: 2rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #3d2b1f;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 60%;
+  text-align: center;
+  opacity: 0;
+  animation: float 3s ease-in-out infinite alternate;
+  transform: scale(1) rotate(0turn);
+  transition: all 0.8s ease;
+  top: 100%;
+}
+
+
+.gift.show .gift-content {
+  transform: scale(1.2) rotate(0.02turn);
+  opacity: 1;
+}
+
+.gift-btn {
+  width: 100%;
+  margin-top: 1rem;
+  background: #3d2b1f;
+  opacity: 0.8;
+  border: 1px solid #555;
+  padding: 0.5em;
+  border-radius: 3px;
+  color: #fb7f26;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform: scale(1) rotate(0turn);
+}
+
+/* .gift-content:hover { */
+/*   transform: scale(1.2) rotate(0.02turn); */
+/* } */
+
+source {
+  border-radius: 10px;
+}

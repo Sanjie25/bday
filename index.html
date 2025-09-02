@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>WISHY HAPPY B'DAY</title>
+  </head>
+  <body>
+    <div class="crt">
+    <!-- Landing Page -->
+    <div class="landing" id="openPage">
+      <div class="landing-card">
+        <div class="decor"><img src="./flor.png"></div>
+        <div class="logo">
+          <h1>HAPPIEST BIRTHDAY EVERRR</h1>
+          <p>From the world's bewst pewson everrr (that's me, Sanjeev)</p>
+        </div>
+        <button class="open-btn" id="open-btn"><img class="left-arr" src="./left.gif" alt=""> Unwrap This Gift <img class="right-arr" src="./right.gif"></button>
+      </div>
+    </div>
+
+    <!-- Message Page -->
+    <div class="message" id="message">
+      <div class="message-content">
+        <div class="decor"><img src="./birb.png"></div>
+          <div class="contents">
+        <h2>for probably the content</h2>
+          </div>
+      </div>
+    </div>
+
+    <!-- Gift Page -->
+    <div class="gift" id="gift">
+      <div class="gift-content">
+        <div class="decor"><img src="./flor.png"></div>
+        <div class="contents">
+        <h2>Enjoy this while I'll learn to step up next year</h2>
+        </div>
+          <button class="gift-btn" id="gift-btn"> Surprizze </button>
+        <div id="giftContent"></div>
+      </div>
+    </div>
+
+    <script>
+
+          const openPage = document.getElementById('openPage');
+          const giftPage = document.getElementById('gift');
+          const openButton = document.getElementById('open-btn');
+          const giftButton = document.getElementById('gift-btn');
+          const messagePage = document.getElementById('message');
+          console.log(messagePage);
+
+
+          openButton.addEventListener('click', () => {
+              openPage.style.display = 'none';
+              console.log("clicked");
+              showGiftCard();
+          });
+
+          giftButton.addEventListener('click', () => {
+              giftPage.style.display = 'none';
+              console.log("clicked");
+              showMessageCard();
+          });
+
+
+          function showGiftCard() {
+              const giftContent = document.getElementById("giftContent");
+              giftPage.style.display = 'flex';
+            setTimeout(() => {
+              giftPage.classList.add('show');
+              giftPage.classList.add('crt');
+            }, 6);
+          }
+          function showMessageCard() {
+              console.log("done")
+              messagePage.style.display = 'flex';
+              setTimeout(() => {
+              messagePage.classList.add('show');
+              messagePage.classList.add('crt');
+            }, 6);
+          }
+        </script>
+
+    </div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <title>
+</html>
